@@ -1,0 +1,24 @@
+<div class="schedule-widget">
+  <h3 class="schedule-widget__title heading">My schedule</h3>
+  <button
+    class="toggle"
+    type="button"
+    *ngIf="hideable"
+    (click)="toggle()"
+  >
+    <span *ngIf="!hide; else showContentLabel">&#9473;</span>
+  </button>
+  <ul class="schedule" *ngIf="!hide; else noContent">
+    <li class="schedule__item" *ngFor="let item of schedule">
+      {{ item.value }}
+    </li>
+  </ul>
+</div>
+
+<ng-template #showContentLabel>
+  &#43;
+</ng-template>
+
+<ng-template #noContent>
+  <div class="caption">View your schedule</div>
+</ng-template>
