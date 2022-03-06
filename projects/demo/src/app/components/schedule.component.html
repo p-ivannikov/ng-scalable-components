@@ -11,8 +11,8 @@
     </button>
   </div>
   <ul class="schedule-widget__content schedule" *ngIf="!hide; else noContent">
-    <li class="schedule__item" *ngFor="let item of schedule">
-      {{ item.value }}
+    <li class="schedule__item" *ngFor="let item of schedule; let i = index">
+      {{ i+1 }}. {{ item.value }}
     </li>
   </ul>
 </div>
