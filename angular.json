@@ -53,6 +53,7 @@
               "projects/demo/src/assets"
             ],
             "styles": [
+              "node_modules/normalize.css/normalize.css",
               "projects/demo/src/styles.css"
             ],
             "scripts": []
