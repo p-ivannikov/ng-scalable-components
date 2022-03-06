@@ -1,14 +1,15 @@
 .schedule-widget {
+  align-items: center;
   border-bottom: 1px solid #ccc;
   display: grid;
-  grid-template-columns: min-content 1fr;
-  grid-template-rows: min-content 1fr;
+  grid-template-columns: 1fr min-content;
+  grid-template-rows: 40px 1fr;
   row-gap: 24px;
   column-gap: 18px;
   padding: 12px;
 }
 
-.schedule-widget__title {
+.schedule-widget__content {
   grid-column: 1/3;
 }
 
