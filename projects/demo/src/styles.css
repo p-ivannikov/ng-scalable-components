@@ -1,6 +1,11 @@
 .app-body {
   font-size: 24px;
 }
+
 .heading {
   margin: 0;
+}
+
+.heading_align_center {
+  text-align: center;
 }
