@@ -1,0 +1,10 @@
+.services {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.services__item:not(:first-child) {
+  margin-left: 24px;
+}

@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { UserScheduleDto } from '../core/models';
+import { Widget } from './widget.abstract';
 
 @Component({
   selector: 'ngx-schedule',
@@ -7,20 +8,19 @@ import { UserScheduleDto } from '../core/models';
   styleUrls: ['./schedule.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ScheduleComponent implements OnInit {
+export class ScheduleComponent extends Widget<UserScheduleDto> implements OnInit {
 
-  @Input() schedule: UserScheduleDto[] | null = null;
-  @Input() hideable: boolean = false;
-
-  hide: boolean = false;
-
-  constructor() { }
+  constructor() {
+    super();
+  }
 
   ngOnInit(): void {
   }
 
-  toggle(): void {
-    this.hide = !this.hide;
+  protected transform(data: UserScheduleDto[]): string[] {
+    return data.map(
+      ({value}: UserScheduleDto) => value
+    );
   }
 
 }
