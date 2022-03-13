@@ -1,4 +1,7 @@
 <h1 class="heading heading_align_center">User dashboard</h1>
 <ngx-schedule
-  [schedule]="userSchedule$ | async"
+  [data]="(userSchedule$ | async)!"
   [hideable]="true"></ngx-schedule>
+<ngx-services
+  [hideable]="true"
+  [data]="(userServices$ | async)!"></ngx-services>

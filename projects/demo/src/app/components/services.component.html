@@ -1,5 +1,5 @@
 <div class="widget">
-  <h3 class="heading">My schedule</h3>
+  <h3 class="heading">My services</h3>
   <div class="widget__toggle">
     <button
       class="toggle"
@@ -10,10 +10,8 @@
       <span *ngIf="!hide; else showContentLabel">&#9473;</span>
     </button>
   </div>
-  <ul class="widget__content schedule" *ngIf="!hide; else noContent">
-    <li class="schedule__item" *ngFor="let item of data; let i = index">
-      {{ i+1 }}. {{ item.value }}
-    </li>
+  <ul class="widget__content services" *ngIf="!hide; else noContent">
+    <li class="services__item" *ngFor="let item of list">{{ item }}</li>
   </ul>
 </div>
 
@@ -22,5 +20,5 @@
 </ng-template>
 
 <ng-template #noContent>
-  <div class="caption">Your schedule is hidden here </div>
+  <div class="caption">Your services is hidden here </div>
 </ng-template>
